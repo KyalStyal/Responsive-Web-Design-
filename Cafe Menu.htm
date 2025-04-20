@@ -1,0 +1,217 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Preview | Learn Basic CSS by Building a Cafe Menu: Step 91 | freeCodeCamp.org</title><style>
+      #fcc-main-frame {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    </style></head><body style="
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+      "><div><div data-playwright-test-label="preview-iframe" class="notranslate challenge-preview enable-iframe"><iframe srcdoc="&lt;!DOCTYPE html&gt;
+  &lt;base href='' /&gt;
+  &lt;style class=&quot;fcc-hide-header&quot;&gt;
+    head *, title, meta, link, script {
+      display: none !important;
+    }
+  &lt;/style&gt;
+  &lt;script&gt;
+    window.__frameId = 'fcc-main-frame';
+    window.onerror = function(msg) {
+      const string = msg.toLowerCase();
+      if (string.includes('script error')) {
+        msg = 'Build error, open your browser console to learn more.';
+      }
+      console.log(msg);
+      return true;
+    };
+    document.addEventListener('click', function(e) {
+      let element = e.target;
+      while(element &amp;&amp; element.nodeName !== 'A') {
+        element = element.parentElement;
+      }
+      if (element &amp;&amp; element.nodeName === 'A' &amp;&amp; new URL(element.href).hash === '') {
+        e.preventDefault();
+        window.parent.window.alert(
+          i18nContent.t('misc.iframe-alert', { externalLink: element.href })
+        )
+      }
+      if (element) {
+        const href = element.getAttribute('href');
+        if (!href || href[0] !== '#' &amp;&amp; !href.match(/^https?:\/\//)) {
+          e.preventDefault();
+        }
+        else if (href.match(/^#.+/)) {
+          e.preventDefault();
+          const scrollId = href.substring(1);
+          const scrollElem = document.getElementById(scrollId);
+
+          if (scrollElem) {
+            scrollElem.scrollIntoView();
+          }
+        }
+      }
+    }, false);
+    document.addEventListener('submit', function(e) {
+      const action = e.target.getAttribute('action');
+      e.preventDefault();
+      if (action &amp;&amp; action.match(/https?:\/\//)) {
+        window.parent.window.alert(
+          i18nContent.t('misc.iframe-form-submit-alert', { externalLink: action  })
+        )
+      }
+    }, false);
+  &lt;/script&gt;
+&lt;head&gt;&lt;/head&gt;&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Cafe Menu&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; data-href=&quot;styles.css&quot;&gt;
+  &lt;style class=&quot;fcc-injected-styles&quot;&gt;body {
+  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.established {
+  font-style: italic;
+}
+
+h1, h2, p {
+  text-align: center;
+}
+
+.menu {
+  width: 80%;
+  background-color: burlywood;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  max-width: 500px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr {
+  height: 2px;
+  background-color: brown;
+  border-color: brown;
+}
+
+.bottom-line {
+  margin-top: 25px;
+}
+
+h1, h2 {
+  font-family: Impact, serif;
+}
+
+.item p {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.flavor, .dessert {
+  text-align: left;
+  width: 75%;
+}
+
+.price {
+  text-align: right;
+  width: 25%;
+}
+
+/* FOOTER */
+
+footer {
+  font-size: 14px;
+}
+
+.address {
+  margin-bottom: 5px;
+}
+
+a {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: brown;
+}
+
+a:active {
+  color: brown;
+}&lt;/style&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;menu&quot;&gt;
+      &lt;main&gt;
+        &lt;h1&gt;CAMPER CAFE&lt;/h1&gt;
+        &lt;p class=&quot;established&quot;&gt;Est. 2020&lt;/p&gt;
+        &lt;hr&gt;
+        &lt;section&gt;
+          &lt;h2&gt;Coffee&lt;/h2&gt;
+          &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg&quot; alt=&quot;coffee icon&quot;&gt;
+          &lt;article class=&quot;item&quot;&gt;
+            &lt;p class=&quot;flavor&quot;&gt;French Vanilla&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.00&lt;/p&gt;
+          &lt;/article&gt;
+          &lt;article class=&quot;item&quot;&gt;
+            &lt;p class=&quot;flavor&quot;&gt;Caramel Macchiato&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.75&lt;/p&gt;
+          &lt;/article&gt;
+          &lt;article class=&quot;item&quot;&gt;
+            &lt;p class=&quot;flavor&quot;&gt;Pumpkin Spice&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.50&lt;/p&gt;
+          &lt;/article&gt;
+          &lt;article class=&quot;item&quot;&gt;
+            &lt;p class=&quot;flavor&quot;&gt;Hazelnut&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;4.00&lt;/p&gt;
+          &lt;/article&gt;
+          &lt;article class=&quot;item&quot;&gt;
+            &lt;p class=&quot;flavor&quot;&gt;Mocha&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;4.50&lt;/p&gt;
+          &lt;/article&gt;
+        &lt;/section&gt;
+        &lt;section&gt;
+          &lt;h2&gt;Desserts&lt;/h2&gt;
+          &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg&quot; alt=&quot;pie icon&quot;&gt;
+          &lt;article class=&quot;item&quot;&gt;
+            &lt;p class=&quot;dessert&quot;&gt;Donut&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;1.50&lt;/p&gt;
+          &lt;/article&gt;
+          &lt;article class=&quot;item&quot;&gt;
+            &lt;p class=&quot;dessert&quot;&gt;Cherry Pie&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;2.75&lt;/p&gt;
+          &lt;/article&gt;
+          &lt;article class=&quot;item&quot;&gt;
+            &lt;p class=&quot;dessert&quot;&gt;Cheesecake&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.00&lt;/p&gt;
+          &lt;/article&gt;
+          &lt;article class=&quot;item&quot;&gt;
+            &lt;p class=&quot;dessert&quot;&gt;Cinnamon Roll&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;2.50&lt;/p&gt;
+          &lt;/article&gt;
+        &lt;/section&gt;
+      &lt;/main&gt;
+      &lt;hr class=&quot;bottom-line&quot;&gt;
+      &lt;footer&gt;
+        &lt;p&gt;
+          &lt;a href=&quot;https://www.freecodecamp.org&quot; target=&quot;_blank&quot;&gt;Visit our website&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;p class=&quot;address&quot;&gt;123 Free Code Camp Drive&lt;/p&gt;
+      &lt;/footer&gt;
+    &lt;/div&gt;
+  
+&lt;/body&gt;" id="fcc-main-frame" title="Cafe Menu preview" lang="en" class="challenge-preview-frame"></iframe></div></div></body></html>
