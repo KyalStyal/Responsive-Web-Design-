@@ -1,0 +1,134 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Preview | Learn CSS Colors by Building a Set of Colored Markers: Step 94 | freeCodeCamp.org</title><style>
+      #fcc-main-frame {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    </style></head><body style="
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+      "><div><div data-playwright-test-label="preview-iframe" class="notranslate challenge-preview enable-iframe"><iframe srcdoc="&lt;!DOCTYPE html&gt;
+  &lt;base href='' /&gt;
+  &lt;style class=&quot;fcc-hide-header&quot;&gt;
+    head *, title, meta, link, script {
+      display: none !important;
+    }
+  &lt;/style&gt;
+  &lt;script&gt;
+    window.__frameId = 'fcc-main-frame';
+    window.onerror = function(msg) {
+      const string = msg.toLowerCase();
+      if (string.includes('script error')) {
+        msg = 'Build error, open your browser console to learn more.';
+      }
+      console.log(msg);
+      return true;
+    };
+    document.addEventListener('click', function(e) {
+      let element = e.target;
+      while(element &amp;&amp; element.nodeName !== 'A') {
+        element = element.parentElement;
+      }
+      if (element &amp;&amp; element.nodeName === 'A' &amp;&amp; new URL(element.href).hash === '') {
+        e.preventDefault();
+        window.parent.window.alert(
+          i18nContent.t('misc.iframe-alert', { externalLink: element.href })
+        )
+      }
+      if (element) {
+        const href = element.getAttribute('href');
+        if (!href || href[0] !== '#' &amp;&amp; !href.match(/^https?:\/\//)) {
+          e.preventDefault();
+        }
+        else if (href.match(/^#.+/)) {
+          e.preventDefault();
+          const scrollId = href.substring(1);
+          const scrollElem = document.getElementById(scrollId);
+
+          if (scrollElem) {
+            scrollElem.scrollIntoView();
+          }
+        }
+      }
+    }, false);
+    document.addEventListener('submit', function(e) {
+      const action = e.target.getAttribute('action');
+      e.preventDefault();
+      if (action &amp;&amp; action.match(/https?:\/\//)) {
+        window.parent.window.alert(
+          i18nContent.t('misc.iframe-form-submit-alert', { externalLink: action  })
+        )
+      }
+    }, false);
+  &lt;/script&gt;
+&lt;head&gt;&lt;/head&gt;&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Colored Markers&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; data-href=&quot;styles.css&quot;&gt;
+  &lt;style class=&quot;fcc-injected-styles&quot;&gt;h1 {
+  text-align: center;
+}
+
+.container {
+  background-color: rgb(255, 255, 255);
+  padding: 10px 0;
+}
+
+.marker {
+  width: 200px;
+  height: 25px;
+  margin: 10px auto;
+}
+
+.cap {
+  width: 60px;
+  height: 25px;
+}
+
+.sleeve {
+  width: 110px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-left: 10px double rgba(0, 0, 0, 0.75);
+}
+
+.cap, .sleeve {
+  display: inline-block;
+}
+
+.red {
+  background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+  box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+}
+
+.green {
+  background: linear-gradient(#55680D, #71F53E, #116C31);
+  box-shadow: 0 0 20px 0 #3B7E20CC;
+}
+
+.blue {
+  background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+  box-shadow: 0 0 20px 0 hsla(223,59%,31%,0.8);
+}
+&lt;/style&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;CSS Color Markers&lt;/h1&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;marker red&quot;&gt;
+        &lt;div class=&quot;cap&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;sleeve&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;marker green&quot;&gt;
+        &lt;div class=&quot;cap&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;sleeve&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;marker blue&quot;&gt;
+        &lt;div class=&quot;cap&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;sleeve&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  
+&lt;/body&gt;" id="fcc-main-frame" title="Colored Markers preview" lang="en" class="challenge-preview-frame"></iframe></div></div></body></html>
