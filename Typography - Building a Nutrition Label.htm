@@ -1,0 +1,220 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Preview | Learn Typography by Building a Nutrition Label: Step 68 | freeCodeCamp.org</title><style>
+      #fcc-main-frame {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    </style></head><body style="
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+      "><div><div data-playwright-test-label="preview-iframe" class="notranslate challenge-preview enable-iframe"><iframe srcdoc="&lt;!DOCTYPE html&gt;
+  &lt;base href='' /&gt;
+  &lt;style class=&quot;fcc-hide-header&quot;&gt;
+    head *, title, meta, link, script {
+      display: none !important;
+    }
+  &lt;/style&gt;
+  &lt;script&gt;
+    window.__frameId = 'fcc-main-frame';
+    window.onerror = function(msg) {
+      const string = msg.toLowerCase();
+      if (string.includes('script error')) {
+        msg = 'Build error, open your browser console to learn more.';
+      }
+      console.log(msg);
+      return true;
+    };
+    document.addEventListener('click', function(e) {
+      let element = e.target;
+      while(element &amp;&amp; element.nodeName !== 'A') {
+        element = element.parentElement;
+      }
+      if (element &amp;&amp; element.nodeName === 'A' &amp;&amp; new URL(element.href).hash === '') {
+        e.preventDefault();
+        window.parent.window.alert(
+          i18nContent.t('misc.iframe-alert', { externalLink: element.href })
+        )
+      }
+      if (element) {
+        const href = element.getAttribute('href');
+        if (!href || href[0] !== '#' &amp;&amp; !href.match(/^https?:\/\//)) {
+          e.preventDefault();
+        }
+        else if (href.match(/^#.+/)) {
+          e.preventDefault();
+          const scrollId = href.substring(1);
+          const scrollElem = document.getElementById(scrollId);
+
+          if (scrollElem) {
+            scrollElem.scrollIntoView();
+          }
+        }
+      }
+    }, false);
+    document.addEventListener('submit', function(e) {
+      const action = e.target.getAttribute('action');
+      e.preventDefault();
+      if (action &amp;&amp; action.match(/https?:\/\//)) {
+        window.parent.window.alert(
+          i18nContent.t('misc.iframe-form-submit-alert', { externalLink: action  })
+        )
+      }
+    }, false);
+  &lt;/script&gt;
+&lt;head&gt;&lt;/head&gt;&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;Nutrition Label&lt;/title&gt;
+  &lt;link href=&quot;https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; data-href=&quot;styles.css&quot;&gt;
+&lt;style class=&quot;fcc-injected-styles&quot;&gt;* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.label {
+  border: 2px solid black;
+  width: 270px;
+  margin: 20px auto;
+  padding: 0 7px;
+}
+
+header h1 {
+  text-align: center;
+  margin: -4px 0;
+  letter-spacing: 0.15px
+}
+
+p {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.divider {
+  border-bottom: 1px solid #888989;
+  margin: 2px 0;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.large {
+  height: 10px;
+}
+
+.large, .medium {
+  background-color: black;
+  border: 0;
+}
+
+.medium {
+  height: 5px;
+}
+
+.small-text {
+  font-size: 0.85rem;
+}
+
+
+.calories-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.calories-info h2 {
+  margin: 0;
+}
+
+.left-container p {
+  margin: -5px -2px;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.calories-info span {
+  margin: -7px -2px;
+  font-size: 2.4em;
+  font-weight: 700;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.indent {
+  margin-left: 1em;
+}
+
+.double-indent {
+  margin-left: 2em;
+}
+
+.daily-value p:not(.no-divider) {
+  border-bottom: 1px solid #888989;
+}
+
+.note {
+  font-size: 0.6rem;
+  margin: 5px 0;
+  padding: 0 8px;
+  text-indent: -8px
+}&lt;/style&gt;&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;label&quot;&gt;
+    &lt;header&gt;
+      &lt;h1 class=&quot;bold&quot;&gt;Nutrition Facts&lt;/h1&gt;
+      &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+      &lt;p&gt;8 servings per container&lt;/p&gt;
+      &lt;p class=&quot;bold&quot;&gt;Serving size &lt;span&gt;2/3 cup (55g)&lt;/span&gt;&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;div class=&quot;divider large&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;calories-info&quot;&gt;
+      &lt;div class=&quot;left-container&quot;&gt;
+        &lt;h2 class=&quot;bold small-text&quot;&gt;Amount per serving&lt;/h2&gt;
+        &lt;p&gt;Calories&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;span&gt;230&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;divider medium&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;daily-value small-text&quot;&gt;
+      &lt;p class=&quot;bold right no-divider&quot;&gt;% Daily Value *&lt;/p&gt;
+      &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+      &lt;p&gt;&lt;span&gt;&lt;span class=&quot;bold&quot;&gt;Total Fat&lt;/span&gt; 8g&lt;/span&gt; &lt;span class=&quot;bold&quot;&gt;10%&lt;/span&gt;&lt;/p&gt;
+      &lt;p class=&quot;indent no-divider&quot;&gt;Saturated Fat 1g &lt;span class=&quot;bold&quot;&gt;5%&lt;/span&gt;&lt;/p&gt;
+      &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+      &lt;p class=&quot;indent no-divider&quot;&gt;&lt;span&gt;&lt;i&gt;Trans&lt;/i&gt; Fat 0g&lt;/span&gt;&lt;/p&gt;
+      &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+      &lt;p&gt;&lt;span&gt;&lt;span class=&quot;bold&quot;&gt;Cholesterol&lt;/span&gt; 0mg&lt;/span&gt; &lt;span class=&quot;bold&quot;&gt;0%&lt;/span&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;span&gt;&lt;span class=&quot;bold&quot;&gt;Sodium&lt;/span&gt; 160mg&lt;/span&gt; &lt;span class=&quot;bold&quot;&gt;7%&lt;/span&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;span&gt;&lt;span class=&quot;bold&quot;&gt;Total Carbohydrate&lt;/span&gt; 37g&lt;/span&gt; &lt;span class=&quot;bold&quot;&gt;13%&lt;/span&gt;&lt;/p&gt;
+      &lt;p class=&quot;indent no-divider&quot;&gt;Dietary Fiber 4g&lt;/p&gt;
+      &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+      &lt;p class=&quot;indent no-divider&quot;&gt;Total Sugars 12g&lt;/p&gt;
+      &lt;div class=&quot;divider double-indent&quot;&gt;&lt;/div&gt;
+      &lt;p class=&quot;double-indent no-divider&quot;&gt;Includes 10g Added Sugars &lt;span class=&quot;bold&quot;&gt;20%&lt;/span&gt;&lt;/p&gt;
+      &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+      &lt;p class=&quot;no-divider&quot;&gt;&lt;span&gt;&lt;span class=&quot;bold&quot;&gt;Protein&lt;/span&gt; 3g&lt;/span&gt;&lt;/p&gt;
+      &lt;div class=&quot;divider large&quot;&gt;&lt;/div&gt;
+      &lt;p&gt;Vitamin D 2mcg &lt;span&gt;10%&lt;/span&gt;&lt;/p&gt;
+      &lt;p&gt;Calcium 260mg &lt;span&gt;20%&lt;/span&gt;&lt;/p&gt;
+      &lt;p&gt;Iron 8mg &lt;span&gt;45%&lt;/span&gt;&lt;/p&gt;
+      &lt;p class=&quot;no-divider&quot;&gt;Potassium 235mg &lt;span&gt;6%&lt;/span&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;divider medium&quot;&gt;&lt;/div&gt;
+    &lt;p class=&quot;note&quot;&gt;* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily
+      diet. 2,000 calories a day is used for general nutrition advice.&lt;/p&gt;
+  &lt;/div&gt;
+
+&lt;/body&gt;" id="fcc-main-frame" title="Nutrition Label preview" lang="en" class="challenge-preview-frame"></iframe></div></div></body></html>
