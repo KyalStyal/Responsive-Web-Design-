@@ -1,0 +1,184 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Preview | Learn HTML Forms by Building a Registration Form: Step 65 | freeCodeCamp.org</title><style>
+      #fcc-main-frame {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    </style></head><body style="
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+      "><div><div data-playwright-test-label="preview-iframe" class="notranslate challenge-preview enable-iframe"><iframe srcdoc="&lt;!DOCTYPE html&gt;
+  &lt;base href='' /&gt;
+  &lt;style class=&quot;fcc-hide-header&quot;&gt;
+    head *, title, meta, link, script {
+      display: none !important;
+    }
+  &lt;/style&gt;
+  &lt;script&gt;
+    window.__frameId = 'fcc-main-frame';
+    window.onerror = function(msg) {
+      const string = msg.toLowerCase();
+      if (string.includes('script error')) {
+        msg = 'Build error, open your browser console to learn more.';
+      }
+      console.log(msg);
+      return true;
+    };
+    document.addEventListener('click', function(e) {
+      let element = e.target;
+      while(element &amp;&amp; element.nodeName !== 'A') {
+        element = element.parentElement;
+      }
+      if (element &amp;&amp; element.nodeName === 'A' &amp;&amp; new URL(element.href).hash === '') {
+        e.preventDefault();
+        window.parent.window.alert(
+          i18nContent.t('misc.iframe-alert', { externalLink: element.href })
+        )
+      }
+      if (element) {
+        const href = element.getAttribute('href');
+        if (!href || href[0] !== '#' &amp;&amp; !href.match(/^https?:\/\//)) {
+          e.preventDefault();
+        }
+        else if (href.match(/^#.+/)) {
+          e.preventDefault();
+          const scrollId = href.substring(1);
+          const scrollElem = document.getElementById(scrollId);
+
+          if (scrollElem) {
+            scrollElem.scrollIntoView();
+          }
+        }
+      }
+    }, false);
+    document.addEventListener('submit', function(e) {
+      const action = e.target.getAttribute('action');
+      e.preventDefault();
+      if (action &amp;&amp; action.match(/https?:\/\//)) {
+        window.parent.window.alert(
+          i18nContent.t('misc.iframe-form-submit-alert', { externalLink: action  })
+        )
+      }
+    }, false);
+  &lt;/script&gt;
+&lt;head&gt;&lt;/head&gt;&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Registration Form&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; data-href=&quot;styles.css&quot;&gt;
+  &lt;style class=&quot;fcc-injected-styles&quot;&gt;body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: #1b1b32;
+  color: #f5f6f7;
+  font-family: Tahoma;
+  font-size: 16px;
+}
+
+h1, p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  border-bottom: 3px solid #3b3b4f;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
+
+input, textarea {
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+}
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+input[type=&quot;submit&quot;] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b3b4f;
+  border-color: white;
+  min-width: 300px;
+}
+
+input[type=&quot;file&quot;] {
+  padding: 1px 2px;
+}
+
+a[href=&quot;https://www.freecodecamp.org/news/terms-of-service/&quot;]{
+  color: #dfdfe2;
+}
+&lt;/style&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Registration Form&lt;/h1&gt;
+    &lt;p&gt;Please fill out this form with the required information&lt;/p&gt;
+    &lt;form method=&quot;post&quot; action=&quot;https://register-demo.freecodecamp.org&quot;&gt;
+      &lt;fieldset&gt;
+        &lt;label for=&quot;first-name&quot;&gt;Enter Your First Name: &lt;input id=&quot;first-name&quot; name=&quot;first-name&quot; type=&quot;text&quot; required=&quot;&quot;&gt;&lt;/label&gt;
+        &lt;label for=&quot;last-name&quot;&gt;Enter Your Last Name: &lt;input id=&quot;last-name&quot; name=&quot;last-name&quot; type=&quot;text&quot; required=&quot;&quot;&gt;&lt;/label&gt;
+        &lt;label for=&quot;email&quot;&gt;Enter Your Email: &lt;input id=&quot;email&quot; name=&quot;email&quot; type=&quot;email&quot; required=&quot;&quot;&gt;&lt;/label&gt;
+        &lt;label for=&quot;new-password&quot;&gt;Create a New Password: &lt;input id=&quot;new-password&quot; name=&quot;new-password&quot; type=&quot;password&quot; pattern=&quot;[a-z0-5]{8,}&quot; required=&quot;&quot;&gt;&lt;/label&gt;
+      &lt;/fieldset&gt;
+      &lt;fieldset&gt;
+        &lt;legend&gt;Account type (required)&lt;/legend&gt;
+        &lt;label for=&quot;personal-account&quot;&gt;&lt;input id=&quot;personal-account&quot; type=&quot;radio&quot; name=&quot;account-type&quot; class=&quot;inline&quot; checked=&quot;&quot;&gt; Personal&lt;/label&gt;
+        &lt;label for=&quot;business-account&quot;&gt;&lt;input id=&quot;business-account&quot; type=&quot;radio&quot; name=&quot;account-type&quot; class=&quot;inline&quot;&gt; Business&lt;/label&gt;
+      &lt;/fieldset&gt;
+      &lt;fieldset&gt;
+        &lt;label for=&quot;profile-picture&quot;&gt;Upload a profile picture: &lt;input id=&quot;profile-picture&quot; type=&quot;file&quot; name=&quot;file&quot;&gt;&lt;/label&gt;
+        &lt;label for=&quot;age&quot;&gt;Input your age (years): &lt;input id=&quot;age&quot; type=&quot;number&quot; name=&quot;age&quot; min=&quot;13&quot; max=&quot;120&quot;&gt;&lt;/label&gt;
+        &lt;label for=&quot;referrer&quot;&gt;How did you hear about us?
+          &lt;select id=&quot;referrer&quot; name=&quot;referrer&quot;&gt;
+            &lt;option value=&quot;&quot;&gt;(select one)&lt;/option&gt;
+            &lt;option value=&quot;1&quot;&gt;freeCodeCamp News&lt;/option&gt;
+            &lt;option value=&quot;2&quot;&gt;freeCodeCamp YouTube Channel&lt;/option&gt;
+            &lt;option value=&quot;3&quot;&gt;freeCodeCamp Forum&lt;/option&gt;
+            &lt;option value=&quot;4&quot;&gt;Other&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/label&gt;
+        &lt;label for=&quot;bio&quot;&gt;Provide a bio:
+          &lt;textarea id=&quot;bio&quot; name=&quot;bio&quot; rows=&quot;3&quot; cols=&quot;30&quot; placeholder=&quot;I like coding on the beach...&quot;&gt;&lt;/textarea&gt;
+        &lt;/label&gt;
+      &lt;/fieldset&gt;
+      &lt;label for=&quot;terms-and-conditions&quot;&gt;
+        &lt;input class=&quot;inline&quot; id=&quot;terms-and-conditions&quot; type=&quot;checkbox&quot; required=&quot;&quot; name=&quot;terms-and-conditions&quot;&gt; I accept the &lt;a href=&quot;https://www.freecodecamp.org/news/terms-of-service/&quot;&gt;terms and conditions&lt;/a&gt;
+      &lt;/label&gt;
+      &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+    &lt;/form&gt;
+  
+&lt;/body&gt;" id="fcc-main-frame" title="Registration Form preview" lang="en" class="challenge-preview-frame"></iframe></div></div></body></html>
