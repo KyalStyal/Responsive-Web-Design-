@@ -1,0 +1,128 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Preview | Learn the CSS Box Model by Building a Rothko Painting: Step 45 | freeCodeCamp.org</title><style>
+      #fcc-main-frame {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    </style></head><body style="
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+      "><div><div data-playwright-test-label="preview-iframe" class="notranslate challenge-preview enable-iframe"><iframe srcdoc="
+  &lt;base href='' /&gt;
+  &lt;style class=&quot;fcc-hide-header&quot;&gt;
+    head *, title, meta, link, script {
+      display: none !important;
+    }
+  &lt;/style&gt;
+  &lt;script&gt;
+    window.__frameId = 'fcc-main-frame';
+    window.onerror = function(msg) {
+      const string = msg.toLowerCase();
+      if (string.includes('script error')) {
+        msg = 'Build error, open your browser console to learn more.';
+      }
+      console.log(msg);
+      return true;
+    };
+    document.addEventListener('click', function(e) {
+      let element = e.target;
+      while(element &amp;&amp; element.nodeName !== 'A') {
+        element = element.parentElement;
+      }
+      if (element &amp;&amp; element.nodeName === 'A' &amp;&amp; new URL(element.href).hash === '') {
+        e.preventDefault();
+        window.parent.window.alert(
+          i18nContent.t('misc.iframe-alert', { externalLink: element.href })
+        )
+      }
+      if (element) {
+        const href = element.getAttribute('href');
+        if (!href || href[0] !== '#' &amp;&amp; !href.match(/^https?:\/\//)) {
+          e.preventDefault();
+        }
+        else if (href.match(/^#.+/)) {
+          e.preventDefault();
+          const scrollId = href.substring(1);
+          const scrollElem = document.getElementById(scrollId);
+
+          if (scrollElem) {
+            scrollElem.scrollIntoView();
+          }
+        }
+      }
+    }, false);
+    document.addEventListener('submit', function(e) {
+      const action = e.target.getAttribute('action');
+      e.preventDefault();
+      if (action &amp;&amp; action.match(/https?:\/\//)) {
+        window.parent.window.alert(
+          i18nContent.t('misc.iframe-form-submit-alert', { externalLink: action  })
+        )
+      }
+    }, false);
+  &lt;/script&gt;
+&lt;head&gt;&lt;/head&gt;&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Rothko Painting&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; data-href=&quot;styles.css&quot;&gt;
+  &lt;style class=&quot;fcc-injected-styles&quot;&gt;.canvas {
+  width: 500px;
+  height: 600px;
+  background-color: #4d0f00;
+  overflow: hidden;
+  filter: blur(2px);
+}
+
+.frame {
+  border: 50px solid black;
+  width: 500px;
+  padding: 50px;
+  margin: 20px auto;
+}
+
+.one {
+  width: 425px;
+  height: 150px;
+  background-color: #efb762;
+  margin: 20px auto;
+  box-shadow: 0 0 3px 3px #efb762;
+  border-radius: 9px;
+  transform: rotate(-0.6deg);
+}
+
+.two {
+  width: 475px;
+  height: 200px;
+  background-color: #8f0401;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 3px 3px #8f0401;
+  border-radius: 8px 10px;
+  transform: rotate(0.4deg);
+}
+
+.one, .two {
+  filter: blur(1px);
+}
+
+.three {
+  width: 91%;
+  height: 28%;
+  background-color: #b20403;
+  margin: auto;
+  filter: blur(2px);
+  box-shadow: 0 0 5px 5px #b20403;
+  border-radius: 30px 25px 60px 12px;
+transform: rotate(-0.2deg)
+}&lt;/style&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;frame&quot;&gt;
+      &lt;div class=&quot;canvas&quot;&gt;
+        &lt;div class=&quot;one&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;two&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;three&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  
+&lt;/body&gt;" id="fcc-main-frame" title="Rothko Painting preview" lang="en" class="challenge-preview-frame"></iframe></div></div></body></html>
