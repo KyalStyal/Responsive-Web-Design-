@@ -1,0 +1,246 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Preview | Survey Form: Build a Survey Form | freeCodeCamp.org</title><style>
+      #fcc-main-frame {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    </style></head><body style="
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+      "><div><div data-playwright-test-label="preview-iframe" class="notranslate challenge-preview enable-iframe"><iframe srcdoc="&lt;!DOCTYPE html&gt;
+  &lt;base href='' /&gt;
+  &lt;style class=&quot;fcc-hide-header&quot;&gt;
+    head *, title, meta, link, script {
+      display: none !important;
+    }
+  &lt;/style&gt;
+  &lt;script&gt;
+    window.__frameId = 'fcc-main-frame';
+    window.onerror = function(msg) {
+      const string = msg.toLowerCase();
+      if (string.includes('script error')) {
+        msg = 'Build error, open your browser console to learn more.';
+      }
+      console.log(msg);
+      return true;
+    };
+    document.addEventListener('click', function(e) {
+      let element = e.target;
+      while(element &amp;&amp; element.nodeName !== 'A') {
+        element = element.parentElement;
+      }
+      if (element &amp;&amp; element.nodeName === 'A' &amp;&amp; new URL(element.href).hash === '') {
+        e.preventDefault();
+        window.parent.window.alert(
+          i18nContent.t('misc.iframe-alert', { externalLink: element.href })
+        )
+      }
+      if (element) {
+        const href = element.getAttribute('href');
+        if (!href || href[0] !== '#' &amp;&amp; !href.match(/^https?:\/\//)) {
+          e.preventDefault();
+        }
+        else if (href.match(/^#.+/)) {
+          e.preventDefault();
+          const scrollId = href.substring(1);
+          const scrollElem = document.getElementById(scrollId);
+
+          if (scrollElem) {
+            scrollElem.scrollIntoView();
+          }
+        }
+      }
+    }, false);
+    document.addEventListener('submit', function(e) {
+      const action = e.target.getAttribute('action');
+      e.preventDefault();
+      if (action &amp;&amp; action.match(/https?:\/\//)) {
+        window.parent.window.alert(
+          i18nContent.t('misc.iframe-form-submit-alert', { externalLink: action  })
+        )
+      }
+    }, false);
+  &lt;/script&gt;
+&lt;head&gt;&lt;/head&gt;&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Survey Form&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; data-href=&quot;styles.css&quot;&gt;
+&lt;style class=&quot;fcc-injected-styles&quot;&gt;/* Reset body defaults */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma, sans-serif;
+  background-color: #1b1b32;
+  color: #f5f6f7;
+  min-height: 100vh;
+}
+
+/* Center the title and description */
+h1, p {
+  text-align: center;
+  margin: 20px auto;
+}
+
+/* Style the form container */
+form {
+  background-color: #282c40;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Space out form elements */
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+/* Style text inputs, selects, and textarea */
+input[type=&quot;text&quot;],
+input[type=&quot;email&quot;],
+input[type=&quot;number&quot;],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #0a0a23;
+  color: white;
+}
+
+/* Style checkboxes and radio buttons */
+input[type=&quot;checkbox&quot;],
+input[type=&quot;radio&quot;] {
+  margin-right: 10px;
+}
+
+/* Submit button */
+input[type=&quot;submit&quot;] {
+  background-color: #3b3b4f;
+  color: white;
+  border: none;
+  padding: 15px;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+input[type=&quot;submit&quot;]:hover {
+  background-color: #5c5c7a;
+}
+
+/* Add some spacing around the fieldsets */
+fieldset {
+  border: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+/* Style legends if needed */
+legend {
+  margin-top: 20px;
+  font-weight: bold;
+}
+&lt;/style&gt;&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1 id=&quot;title&quot;&gt;Project Survey Form&lt;/h1&gt;
+  &lt;p id=&quot;description&quot;&gt;Thanks for taking the time to fill in my form!&lt;/p&gt;
+
+  &lt;form id=&quot;survey-form&quot;&gt;
+    &lt;fieldset&gt;
+
+      &lt;label id=&quot;name-label&quot; for=&quot;name&quot;&gt;Name:
+        &lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;details&quot; placeholder=&quot;Enter Your Name&quot; required=&quot;&quot;&gt;
+      &lt;/label&gt;
+
+      &lt;label id=&quot;email-label&quot; for=&quot;email&quot;&gt;Email:
+        &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;details&quot; placeholder=&quot;Enter Your Email&quot; required=&quot;&quot;&gt;
+      &lt;/label&gt;
+
+      &lt;label id=&quot;number-label&quot; for=&quot;number&quot;&gt;Age:
+        &lt;input type=&quot;number&quot; id=&quot;number&quot; name=&quot;details&quot; placeholder=&quot;Age&quot; min=&quot;7&quot; max=&quot;99&quot; required=&quot;&quot;&gt;
+      &lt;/label&gt;
+
+      &lt;label for=&quot;current-role&quot;&gt;Which Option Best Describes You?
+        &lt;select id=&quot;current-role&quot; name=&quot;role&quot; required=&quot;&quot;&gt;
+          &lt;option value=&quot;&quot;&gt;Select current role&lt;/option&gt;
+          &lt;option value=&quot;1&quot;&gt;Student&lt;/option&gt;
+          &lt;option value=&quot;2&quot;&gt;Full Time Job&lt;/option&gt;
+          &lt;option value=&quot;3&quot;&gt;Full Time Learner&lt;/option&gt;
+          &lt;option value=&quot;4&quot;&gt;Other&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/label&gt;
+
+    &lt;/fieldset&gt;
+
+    &lt;fieldset&gt;
+
+      &lt;legend&gt;Would you Recommend This Survey to a Friend?&lt;/legend&gt;
+
+      &lt;label&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;recommendation&quot; value=&quot;1&quot; required=&quot;&quot; checked=&quot;&quot;&gt; Definitely
+      &lt;/label&gt;
+
+      &lt;label&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;recommendation&quot; value=&quot;2&quot; required=&quot;&quot;&gt; Maybe
+      &lt;/label&gt;
+
+      &lt;label&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;recommendation&quot; value=&quot;3&quot; required=&quot;&quot;&gt; Not Sure
+      &lt;/label&gt;
+
+    &lt;/fieldset&gt;
+
+    &lt;fieldset&gt;
+
+      &lt;label for=&quot;dropdown&quot;&gt;What is Your Favourite Feature of this Survey?
+        &lt;select id=&quot;dropdown&quot; name=&quot;favourite-feature&quot; required=&quot;&quot;&gt;
+          &lt;option value=&quot;&quot;&gt;Select current feature&lt;/option&gt;
+          &lt;option value=&quot;1&quot;&gt;It Looks Super Cool!&lt;/option&gt;
+          &lt;option value=&quot;2&quot;&gt;It's Really Fun&lt;/option&gt;
+          &lt;option value=&quot;3&quot;&gt;The Overall Layout&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/label&gt;
+
+    &lt;/fieldset&gt;
+
+    &lt;fieldset&gt;
+
+      &lt;legend&gt;What would you like to see improved? (Check all that apply)&lt;/legend&gt;
+
+      &lt;label&gt;
+        &lt;input type=&quot;checkbox&quot; value=&quot;1&quot; name=&quot;improvements&quot;&gt; Front-end Projects
+      &lt;/label&gt;
+
+      &lt;label&gt;
+        &lt;input type=&quot;checkbox&quot; value=&quot;2&quot; name=&quot;improvements&quot;&gt; Back-end Projects
+      &lt;/label&gt;
+
+    &lt;/fieldset&gt;
+
+    &lt;fieldset&gt;
+
+      &lt;label for=&quot;text&quot;&gt;Any Comments or Suggestions?
+        &lt;textarea id=&quot;text&quot; name=&quot;text&quot; rows=&quot;3&quot; cols=&quot;30&quot; placeholder=&quot;Enter comment here&quot; required=&quot;&quot;&gt;&lt;/textarea&gt;
+      &lt;/label&gt;
+
+    &lt;/fieldset&gt;
+
+    &lt;input type=&quot;submit&quot; id=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+
+  &lt;/form&gt;
+
+
+
+&lt;/body&gt;" id="fcc-main-frame" title="Survey Form preview" lang="en" class="challenge-preview-frame"></iframe></div></div></body></html>
