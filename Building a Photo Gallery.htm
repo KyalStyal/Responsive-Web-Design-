@@ -1,0 +1,131 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Preview | Learn CSS Flexbox by Building a Photo Gallery: Step 24 | freeCodeCamp.org</title><style>
+      #fcc-main-frame {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    </style></head><body style="
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+      "><div><div data-playwright-test-label="preview-iframe" class="notranslate challenge-preview enable-iframe"><iframe srcdoc="&lt;!DOCTYPE html&gt;
+  &lt;base href='' /&gt;
+  &lt;style class=&quot;fcc-hide-header&quot;&gt;
+    head *, title, meta, link, script {
+      display: none !important;
+    }
+  &lt;/style&gt;
+  &lt;script&gt;
+    window.__frameId = 'fcc-main-frame';
+    window.onerror = function(msg) {
+      const string = msg.toLowerCase();
+      if (string.includes('script error')) {
+        msg = 'Build error, open your browser console to learn more.';
+      }
+      console.log(msg);
+      return true;
+    };
+    document.addEventListener('click', function(e) {
+      let element = e.target;
+      while(element &amp;&amp; element.nodeName !== 'A') {
+        element = element.parentElement;
+      }
+      if (element &amp;&amp; element.nodeName === 'A' &amp;&amp; new URL(element.href).hash === '') {
+        e.preventDefault();
+        window.parent.window.alert(
+          i18nContent.t('misc.iframe-alert', { externalLink: element.href })
+        )
+      }
+      if (element) {
+        const href = element.getAttribute('href');
+        if (!href || href[0] !== '#' &amp;&amp; !href.match(/^https?:\/\//)) {
+          e.preventDefault();
+        }
+        else if (href.match(/^#.+/)) {
+          e.preventDefault();
+          const scrollId = href.substring(1);
+          const scrollElem = document.getElementById(scrollId);
+
+          if (scrollElem) {
+            scrollElem.scrollIntoView();
+          }
+        }
+      }
+    }, false);
+    document.addEventListener('submit', function(e) {
+      const action = e.target.getAttribute('action');
+      e.preventDefault();
+      if (action &amp;&amp; action.match(/https?:\/\//)) {
+        window.parent.window.alert(
+          i18nContent.t('misc.iframe-form-submit-alert', { externalLink: action  })
+        )
+      }
+    }, false);
+  &lt;/script&gt;
+&lt;head&gt;&lt;/head&gt;&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Photo Gallery&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; data-href=&quot;styles.css&quot;&gt;
+  &lt;style class=&quot;fcc-injected-styles&quot;&gt;* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f5f6f7;
+}
+
+.header {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 32px;
+  background-color: #0a0a23;
+  color: #fff;
+  border-bottom: 4px solid #fdb347;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery::after {
+  content: &quot;&quot;;
+  width: 350px;
+}
+&lt;/style&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;header class=&quot;header&quot;&gt;
+      &lt;h1&gt;css flexbox photo gallery&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;div class=&quot;gallery&quot;&gt;
+      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg&quot; alt=&quot;picture 1&quot;&gt;
+      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-photo-gallery/2.jpg&quot; alt=&quot;picture 2&quot;&gt;
+      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-photo-gallery/3.jpg&quot; alt=&quot;picture 3&quot;&gt;
+      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-photo-gallery/4.jpg&quot; alt=&quot;picture 4&quot;&gt;
+      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-photo-gallery/5.jpg&quot; alt=&quot;picture 5&quot;&gt;
+      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-photo-gallery/6.jpg&quot; alt=&quot;picture 6&quot;&gt;
+      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-photo-gallery/7.jpg&quot; alt=&quot;picture 7&quot;&gt;
+      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-photo-gallery/8.jpg&quot; alt=&quot;picture 8&quot;&gt;
+      &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-photo-gallery/9.jpg&quot; alt=&quot;picture 9&quot;&gt;
+    &lt;/div&gt;
+  
+&lt;/body&gt;" id="fcc-main-frame" title="Photo Gallery preview" lang="en" class="challenge-preview-frame"></iframe></div></div></body></html>
